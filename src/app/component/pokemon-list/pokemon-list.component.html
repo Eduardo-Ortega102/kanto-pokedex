@@ -1,0 +1,12 @@
+<div class="list">
+  <div class="list-item" (click)="displayPokemon(pokemon)" *ngFor="let pokemon of pokemon_list">
+    <img class="avatar" src="{{pokemon.large_image}}" alt="{{pokemon.name}}">
+    <div class="summary">
+      <p>{{pokemon.name}}</p>
+      <div class="type-list">
+        <img class="type" *ngFor="let type of pokemon.types" src="assets/types/{{type}}.png" alt="{{type}}">
+      </div>
+    </div>
+    <span class="right-arrow">&#10095;</span>
+  </div>
+</div>
